@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.jvrni.vlue.ui.theme.VlueChallengeTheme
+import com.jvrni.core.designsystem.theme.VlueChallengeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    VlueChallengeTheme {
+    com.jvrni.core.designsystem.theme.VlueChallengeTheme {
         Greeting("Android")
     }
 }
