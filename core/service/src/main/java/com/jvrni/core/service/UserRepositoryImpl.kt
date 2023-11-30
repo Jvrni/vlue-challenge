@@ -5,7 +5,7 @@ import com.jvrni.core.domain.models.User
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class UserRepository @Inject constructor(
+class UserRepositoryImpl @Inject constructor(
     private val service: Service
 ) : UserRepository {
     override fun getUsers() = flow<List<User>> {
