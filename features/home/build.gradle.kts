@@ -44,6 +44,7 @@ android {
 dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:navigation"))
+    implementation(project(":core:designSystem"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
@@ -54,6 +55,9 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
     implementation(libs.navigation)
+
+    implementation(libs.paging)
+    implementation(libs.paging.runtime)
 
     implementation(libs.hilt.navigation)
     implementation(libs.hilt)

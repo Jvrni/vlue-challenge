@@ -1,5 +1,7 @@
 package com.jvrni.core.service.models
 
+import com.google.gson.annotations.SerializedName
+
 data class PictureResponse(
-    val medium: String
+    @SerializedName("medium") val medium: String
 )

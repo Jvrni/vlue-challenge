@@ -1,7 +1,8 @@
 package com.jvrni.core.service.models
 
+import com.google.gson.annotations.SerializedName
+
 data class NameResponse(
-    val title: String,
-    val first: String,
-    val last: String
+    @SerializedName("first") val first: String,
+    @SerializedName("last") val last: String
 )

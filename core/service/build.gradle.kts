@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "API_URL", "\"https://randomuser.me/api/\"")
+            buildConfigField("String", "API_URL", "\"https://randomuser.me/\"")
         }
 
         release {
@@ -53,6 +53,8 @@ dependencies {
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    implementation(libs.paging)
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)

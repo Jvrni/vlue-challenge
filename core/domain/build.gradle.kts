@@ -42,6 +42,8 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
 
+    implementation(libs.paging)
+
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 

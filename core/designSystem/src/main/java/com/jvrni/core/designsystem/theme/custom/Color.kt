@@ -4,7 +4,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
 
-val primary = Color(0xFF3D40DC)
+val primary = Color(0xFFBB86FC)
 
 val black000000 = Color(0xFF000000)
 val black444444 = Color(0xFF444444)

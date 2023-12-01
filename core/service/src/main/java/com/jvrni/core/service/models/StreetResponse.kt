@@ -1,6 +1,8 @@
 package com.jvrni.core.service.models
 
+import com.google.gson.annotations.SerializedName
+
 data class StreetResponse(
-    val number: Int,
-    val name: String,
+    @SerializedName("number") val number: Int,
+    @SerializedName("name") val name: String,
 )

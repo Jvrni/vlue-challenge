@@ -1,5 +1,7 @@
 package com.jvrni.core.service.models
 
+import com.google.gson.annotations.SerializedName
+
 data class RegisteredResponse(
-    val date: String,
+    @SerializedName("date") val date: String,
 )

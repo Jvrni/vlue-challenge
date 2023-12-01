@@ -1,14 +1,19 @@
 package com.jvrni.core.service.models
 
+import com.google.gson.annotations.SerializedName
 import com.jvrni.core.domain.models.User
 
+data class DataResponse(
+    @SerializedName("results") val users: List<UserResponse>
+)
+
 data class UserResponse(
-    val name: NameResponse,
-    val email: String,
-    val picture: PictureResponse,
-    val phone: String,
-    val registered: RegisteredResponse,
-    val location: LocationResponse
+    @SerializedName("name") val name: NameResponse,
+    @SerializedName("email") val email: String,
+    @SerializedName("picture") val picture: PictureResponse,
+    @SerializedName("phone") val phone: String,
+    @SerializedName("registered") val registered: RegisteredResponse,
+    @SerializedName("location") val location: LocationResponse
 ) {
     fun map() = User(
         name = this.name.first,
