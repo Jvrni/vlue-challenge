@@ -32,7 +32,7 @@ fun UserCard(
     onClick: () -> Unit
 ) {
     Card(
-        modifier = Modifier.fillMaxWidth().clickable { onClick.invoke() },
+        modifier = Modifier.fillMaxWidth().clip(CircleShape).clickable { onClick.invoke() },
         colors = CardDefaults.cardColors(contentColor = background),
         shape = CircleShape
     ) {
@@ -42,7 +42,6 @@ fun UserCard(
                     .data(entity.picture)
                     .crossfade(true)
                     .build(),
-//                placeholder = painterResource(R.drawable.ic_baseline_shopping_cart_24),
                 contentDescription = "",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier

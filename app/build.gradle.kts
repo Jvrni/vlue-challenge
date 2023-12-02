@@ -60,6 +60,7 @@ dependencies {
     implementation(project(":core:navigation"))
 
     implementation(project(":features:home"))
+    implementation(project(":features:details"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)

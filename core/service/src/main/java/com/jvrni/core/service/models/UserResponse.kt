@@ -19,7 +19,7 @@ data class UserResponse(
         name = this.name.first,
         lastName = this.name.last,
         email = this.email,
-        picture = this.picture.medium,
+        picture = this.picture.large,
         phone = this.phone,
         registeredDate = this.registered.date,
         location = this.location.map()

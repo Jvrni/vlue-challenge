@@ -5,7 +5,6 @@ import androidx.paging.DifferCallback
 import androidx.paging.NullPaddedList
 import androidx.paging.PagingData
 import androidx.paging.PagingDataDiffer
-import app.cash.turbine.test
 import com.jvrni.core.domain.GetUsers
 import com.jvrni.core.domain.models.Location
 import com.jvrni.core.domain.models.User
@@ -57,9 +56,10 @@ class MainViewModelTest {
     fun `GIVEN a fake information WHEN getting it THEN return failure value`() = runTest {
         coEvery { getUsers.invoke() } returns flowOf(PagingData.empty())
 
-        viewModel.state.value.data.test {
-            assertEquals(awaitItem().collectDataForTest(), emptyList<User>())
-        }
+        assertEquals(
+            viewModel.state.value.data.first().collectDataForTest(),
+            emptyList<User>()
+        )
     }
 
     companion object {

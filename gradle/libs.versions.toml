@@ -21,8 +21,9 @@ paging-runtime = "3.1.1"
 mockk = "1.13.5"
 coroutines = "1.7.3"
 core-test = "2.2.0"
-turbine = "0.11.0"
-mockito = "3.4.6"
+constraint = "1.0.1"
+gson = "2.10.1"
+lifecycle = "2.6.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -53,8 +54,9 @@ paging-runtime = { group = "androidx.paging", name = "paging-runtime", version.r
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 core-test = { group = "androidx.arch.core", name = "core-testing", version.ref = "core-test" }
-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
-mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+constraint = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "constraint" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
