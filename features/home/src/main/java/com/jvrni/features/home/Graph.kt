@@ -1,27 +1,26 @@
 package com.jvrni.features.home
 
-import androidx.compose.runtime.collectAsState
+import android.net.Uri
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavGraphBuilder
-import androidx.navigation.compose.composable
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.jvrni.core.navigation.Destination
 import com.jvrni.core.navigation.Router
+import com.jvrni.core.navigation.extensions.composable
 
 fun NavGraphBuilder.homeGraph(router: Router) {
-    composable(Destination.Home.route) {
+    composable(Destination.Home) {
         val viewModel = hiltViewModel<HomeViewModel>()
-        val action = viewModel.action.collectAsState()
 
-        when (action.value) {
-            is HomeAction.NavigateToDetails -> router.navigateTo(
-                Destination.Details,
-                resetStack = false,
-                popUpStartDestination = false
+        HomeScreen(viewModel) { user ->
+            val gson: Gson = GsonBuilder().create()
+            val userJson = Uri.encode(gson.toJson(user))
+
+            router.navigateTo(
+                destination = Destination.Details,
+                args = userJson
             )
-
-            else -> {}
         }
-
-        HomeScreen(viewModel)
     }
 }

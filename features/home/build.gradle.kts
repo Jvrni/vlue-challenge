@@ -54,7 +54,9 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
-    implementation(libs.navigation)
+    implementation(libs.lifecycle)
+
+    implementation(libs.gson)
 
     implementation(libs.paging)
     implementation(libs.paging.runtime)
@@ -63,8 +65,6 @@ dependencies {
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
 
-    testImplementation(libs.turbine)
-    testImplementation(libs.mockito)
     testImplementation(libs.mockk)
     testImplementation(libs.coroutines.test)
     testImplementation(libs.core.test)

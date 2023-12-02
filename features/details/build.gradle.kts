@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -41,6 +42,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:domain"))
+    implementation(project(":core:navigation"))
+    implementation(project(":core:designSystem"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
@@ -50,6 +54,19 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.constraint)
+    implementation(libs.coil)
+    implementation(libs.lifecycle)
+
+    implementation(libs.gson)
+
+    implementation(libs.hilt.navigation)
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.core.test)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
