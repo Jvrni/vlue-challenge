@@ -8,6 +8,7 @@ import androidx.navigation.compose.rememberNavController
 import com.jvrni.core.designsystem.theme.VlueChallengeTheme
 import com.jvrni.core.navigation.Destination
 import com.jvrni.core.navigation.Router
+import com.jvrni.features.details.detailsGraph
 import com.jvrni.features.home.homeGraph
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,6 +26,7 @@ class MainActivity : ComponentActivity() {
                     startDestination = Destination.Home.route
                 ) {
                     homeGraph(router)
+                    detailsGraph(router)
                 }
             }
         }
